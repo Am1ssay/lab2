@@ -1,3 +1,9 @@
-print("Enter some string that will be reversed: ", end="")
-string = str(input())
-print(string[::-1])
+import sys
+
+if len(sys.argv) > 1:
+    input = " ".join(sys.argv[1:])
+    print(input[::-1])
+else:
+    print(
+        "There is no expected param. Example:\npy example.py This is example sentence"
+    )

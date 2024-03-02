@@ -1,8 +1,8 @@
 import os
+import sys
 
-print(
-    "3.Alright, now let's make a new directory in '% s' :)\nEnter name of new directory: "
-    % os.getcwd(),
-    end="")
-namedir = str(input())
-os.mkdir(namedir)
+
+if len(sys.argv) > 1:
+    os.mkdir(sys.argv[1])
+else:
+    print("There is no expected param. Example:\npy example.py directory")
